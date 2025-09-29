@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: my-nginx-yaml
+    method: from_code
+    lable: second_lable
+  name: my-nginx-yaml
+spec:
+  containers:
+  - image: nginx
+    name: my-nginx-yaml
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
