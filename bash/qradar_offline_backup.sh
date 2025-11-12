@@ -17,7 +17,7 @@ EMAIL="sepoenar@gmail.com"
 
 function send_email () {
 
-  ssh root@10.143.19.230 /bin/sh <<EOF
+  ssh root@10.10.10.10 /bin/sh <<EOF
 mail -s "$SUBJECT" "$EMAIL" << END_MAIL
     Log file: '$LOGFILE'
 -----------------------------------------------
