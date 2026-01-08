@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: test-deployment-yaml
+  name: test-deployment-yaml
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: test-deployment-yaml
+  template:
+    metadata:
+      labels:
+        app: test-deployment-yaml
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
